@@ -152,11 +152,11 @@ function App() {
         >
           DEL
         </button>
-        {btns.map((btn) =>
+        {btns.map((btn, id) =>
           btn === "÷" || btn === "+" || btn === "-" || btn === "*" ? (
-            <OperationButton dispatch={dispatch} operation={btn} />
+            <OperationButton key={id} dispatch={dispatch} operation={btn} />
           ) : (
-            <DigitButton dispatch={dispatch} digit={btn} />
+            <DigitButton key={id} dispatch={dispatch} digit={btn} />
           )
         )}
         <button
